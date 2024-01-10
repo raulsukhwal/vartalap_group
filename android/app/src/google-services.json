@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "117457126969",
+    "project_id": "vartalaap-4df32",
+    "storage_bucket": "vartalaap-4df32.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:117457126969:android:24cd9151b5643adaebafe8",
+        "android_client_info": {
+          "package_name": "com.example.chatapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCh8QnIirXF9M47w1vdPI7cWbehfWfEIYE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:117457126969:android:0933709c99e06abeebafe8",
+        "android_client_info": {
+          "package_name": "com.rahul.vartalaape"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCh8QnIirXF9M47w1vdPI7cWbehfWfEIYE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
