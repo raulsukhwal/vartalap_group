@@ -52,7 +52,7 @@ class _HomePageState extends State<HomePage> {
       });
     });
     // getting the list of snapshots in our stream
-    await DatabaseService(uid: FirebaseAuth.instance.currentUser!.uid)
+    await DatabaseService(uid: FirebaseAuth.instance.currentUser?.uid ?? "")
         .getUserGroups()
         .then((snapshot) {
       setState(() {
@@ -83,17 +83,17 @@ class _HomePageState extends State<HomePage> {
               color: Colors.white, fontWeight: FontWeight.bold, fontSize: 27),
         ),
       ),
-      drawer: Drawer(
+      drawer: Drawer(backgroundColor: Colors.white,
           child: ListView(
         padding: const EdgeInsets.symmetric(vertical: 80),
         children: <Widget>[
           Icon(
             Icons.account_circle,
-            size: 150,
+            size: 200,
             color: Colors.grey[700],
           ),
           const SizedBox(
-            height: 15,
+            height: 40,
           ),
           Text(
             userName,
@@ -101,7 +101,7 @@ class _HomePageState extends State<HomePage> {
             style: const TextStyle(fontWeight: FontWeight.bold,fontSize: 24),
           ),
           const SizedBox(
-            height: 30,
+            height: 80,
           ),
           const Divider(
             height: 2,
@@ -113,12 +113,12 @@ class _HomePageState extends State<HomePage> {
             contentPadding:
             const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
             leading: const Icon(Icons.chat_outlined),
-            title: ElevatedButton(onPressed: (){},
-              child: const Text(
-                "Chats",
-                style: TextStyle(color: Colors.black),
-              ),
+            title: const Text(
+              "Chats",
+              style: TextStyle(color: Colors.black),
+
             ),
+
           ),
           ListTile(
             onTap: () {},
@@ -173,7 +173,7 @@ class _HomePageState extends State<HomePage> {
                             await authService.signOut();
                             Navigator.of(context).pushAndRemoveUntil(
                                 MaterialPageRoute(
-                                    builder: (context) => const LoginPage()),
+                                    builder: (context) => LoginPage()),
                                 (route) => false);
                           },
                           icon: const Icon(
@@ -203,9 +203,9 @@ class _HomePageState extends State<HomePage> {
         elevation: 0,
         backgroundColor: Theme.of(context).primaryColor,
         child: const Icon(
-          Icons.add,
+          Icons.group_add_outlined,
           color: Colors.white,
-          size: 30,
+          size: 24,
         ),
       ),
     );
@@ -238,12 +238,12 @@ class _HomePageState extends State<HomePage> {
                               groupName = val;
                             });
                           },
-                          style: const TextStyle(color: Colors.black),
+                          style: TextStyle(color: Colors.indigo[300]),
                           decoration: InputDecoration(
                               enabledBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
                                       color: Theme.of(context).primaryColor),
-                                  borderRadius: BorderRadius.circular(20)),
+                                  borderRadius: BorderRadius.circular(30)),
                               errorBorder: OutlineInputBorder(
                                   borderSide:
                                       const BorderSide(color: Colors.red),

@@ -2,7 +2,9 @@ import 'package:chatapp_firebase/helper/helper_function.dart';
 import 'package:chatapp_firebase/pages/auth/login_page.dart';
 import 'package:chatapp_firebase/pages/home_page.dart';
 import 'package:chatapp_firebase/service/auth_service.dart';
+import 'package:chatapp_firebase/service/verifygmail.dart';
 import 'package:chatapp_firebase/widgets/widgets.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
@@ -40,13 +42,13 @@ class _RegisterPageState extends State<RegisterPage> {
 
 
 
-                        Image.asset("assets/registerlogo.jpg",height: 200,),
-                        const SizedBox(height: 80),
+                        Image.asset("assets/registerlogo.jpg",height:140,),
+                        const SizedBox(height: 5),
 
                         const Text(
-                            "CREATE YOUR ACCOUNT",
-                            style: TextStyle(color: Color((0xffee7c64)),
-                                fontSize: 28, fontWeight: FontWeight.w700)),  const SizedBox(height: 30),
+                            "CREATE  YOUR ACCOUNT",
+                            style: TextStyle(color: Color(0xFF9FA8DA),
+                                fontSize: 58, fontWeight: FontWeight.w700)),  const SizedBox(height: 44),
                         TextFormField(
                           decoration: textInputDecoration.copyWith(
                               labelText: "Full Name",
@@ -150,7 +152,7 @@ class _RegisterPageState extends State<RegisterPage> {
                                     decoration: TextDecoration.underline),
                                 recognizer: TapGestureRecognizer()
                                   ..onTap = () {
-                                    nextScreen(context, const LoginPage());
+                                    nextScreen(context, LoginPage());
                                   }),
                           ],
                         )),
@@ -174,9 +176,10 @@ class _RegisterPageState extends State<RegisterPage> {
           await HelperFunctions.saveUserLoggedInStatus(true);
           await HelperFunctions.saveUserEmailSF(email);
           await HelperFunctions.saveUserNameSF(fullName);
-          nextScreenReplace(context, const HomePage());
+          nextScreenReplace(context,  UserInfoScreen(user: FirebaseAuth.instance.currentUser!,));
+
         } else {
-          showSnackbar(context, Colors.red, value);
+          showSnackbar(context, Color(0xFFEE7C64), value);
           setState(() {
             _isLoading = false;
           });

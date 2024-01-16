@@ -160,7 +160,7 @@ class _ProfilePageState extends State<ProfilePage> {
                             await authService.signOut();
                             Navigator.of(context).pushAndRemoveUntil(
                                 MaterialPageRoute(
-                                    builder: (context) => const LoginPage()),
+                                    builder: (context) =>  LoginPage()),
                                 (route) => false);
                           },
                           icon: const Icon(

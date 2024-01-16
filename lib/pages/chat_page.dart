@@ -11,9 +11,9 @@ class ChatPage extends StatefulWidget {
   final String userName;
   const ChatPage(
       {Key? key,
-      required this.groupId,
-      required this.groupName,
-      required this.userName})
+        required this.groupId,
+        required this.groupName,
+        required this.userName})
       : super(key: key);
 
   @override
@@ -51,7 +51,7 @@ class _ChatPageState extends State<ChatPage> {
         centerTitle: true,
         elevation: 0,
         title: Text(widget.groupName),
-        backgroundColor: Theme.of(context).primaryColor,
+        backgroundColor: Colors.indigo[200],
         actions: [
           IconButton(
               onPressed: () {
@@ -66,28 +66,29 @@ class _ChatPageState extends State<ChatPage> {
               icon: const Icon(Icons.info))
         ],
       ),
-      body: Stack(
+      body: Column(
         children: <Widget>[
           // chat messages here
-          chatMessages(),
+          Expanded(child: chatMessages(),),
           Container(
+            //decoration: BoxDecoration(image: DecorationImage(image: AssetImage("assets/registerlogo.jpg"),fit: BoxFit.contain)),
             alignment: Alignment.bottomCenter,
             width: MediaQuery.of(context).size.width,
             child: Container(
-              padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 18),
+              padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 4),
               width: MediaQuery.of(context).size.width,
-              color: Colors.grey[900],
+              color: Colors.indigo[200],
               child: Row(children: [
                 Expanded(
                     child: TextFormField(
-                  controller: messageController,
-                  style: const TextStyle(color: Colors.white,fontSize:26),
-                  decoration: const InputDecoration(
-                    hintText: "Send a message...",
-                    hintStyle: TextStyle(color: Colors.white, fontSize: 21),
-                    border: InputBorder.none,
-                  ),
-                )),
+                      controller: messageController,
+                      style: const TextStyle(color: Colors.white,fontSize:26),
+                      decoration: const InputDecoration(
+                        hintText: "Send a message...",
+                        hintStyle: TextStyle(color: Colors.white, fontSize: 21),
+                        border: InputBorder.none,
+                      ),
+                    )),
                 const SizedBox(
                   width: 12,
                 ),
@@ -96,17 +97,17 @@ class _ChatPageState extends State<ChatPage> {
                     sendMessage();
                   },
                   child: Container(
-                    height: 50,
-                    width: 50,
+                    height: 40,
+                    width: 40,
                     decoration: BoxDecoration(
-                      color: Theme.of(context).primaryColor,
+                      color: Theme.of(context).highlightColor,
                       borderRadius: BorderRadius.circular(30),
                     ),
                     child: const Center(
                         child: Icon(
-                      Icons.send,
-                      color: Colors.white,
-                    )),
+                          Icons.send,
+                          color: Colors.white,
+                        )),
                   ),
                 )
               ]),
@@ -123,15 +124,18 @@ class _ChatPageState extends State<ChatPage> {
       builder: (context, AsyncSnapshot snapshot) {
         return snapshot.hasData
             ? ListView.builder(
-                itemCount: snapshot.data.docs.length,
-                itemBuilder: (context, index) {
-                  return MessageTile(
-                      message: snapshot.data.docs[index]['message'],
-                      sender: snapshot.data.docs[index]['sender'],
-                      sentByMe: widget.userName ==
-                          snapshot.data.docs[index]['sender']);
-                },
-              )
+          itemCount: snapshot.data.docs.length,
+          reverse: true,
+          itemBuilder: (context, index) {
+            final reversedIndex = snapshot.data.docs.length - 1 - index;
+            return MessageTile(
+                message: snapshot.data.docs[reversedIndex]['message'],
+                sender: snapshot.data.docs[reversedIndex]['sender'],
+                sentByMe: widget.userName ==
+                    snapshot.data.docs[reversedIndex]['sender'],
+            time: snapshot.data.docs[reversedIndex]['time'],);
+          },
+        )
             : Container();
       },
     );

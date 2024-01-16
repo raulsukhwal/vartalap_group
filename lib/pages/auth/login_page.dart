@@ -10,7 +10,8 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatefulWidget {
-  const LoginPage({Key? key}) : super(key: key);
+   LoginPage({Key? key}) : super(key: key);
+
 
   @override
   State<LoginPage> createState() => _LoginPageState();
@@ -42,9 +43,9 @@ class _LoginPageState extends State<LoginPage> {
                       children: <Widget>[
 
                         const Text("Login now to see what they are talking !",
-                            style: TextStyle(color: Color(0xffee7c64),
+                            style: TextStyle(color: Color(0xFF9FA8DA),
                                 fontSize: 18, fontWeight: FontWeight.w600)),
-                        Image.asset("assets/applogo.gif",height: 460,),
+                        Image.asset("assets/finalogo.png",height: 440,),
                         TextFormField(
                           decoration: textInputDecoration.copyWith(
                               labelText: "Email",
@@ -103,7 +104,7 @@ class _LoginPageState extends State<LoginPage> {
                             child: const Text(
                               "Sign In",
                               style:
-                                  TextStyle(color: Colors.white, fontSize: 16),
+                                  TextStyle(color: Colors.white, fontSize: 20),
                             ),
                             onPressed: () {
                               login();

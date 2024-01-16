@@ -60,7 +60,7 @@ class _GroupInfoState extends State<GroupInfo> {
                     barrierDismissible: false,
                     context: context,
                     builder: (context) {
-                      return AlertDialog(
+                      return AlertDialog(backgroundColor: Colors.white,
                         title: const Text("Exit"),
                         content:
                             const Text("Are you sure you exit the group? "),

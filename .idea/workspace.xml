@@ -5,8 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8312aa99-8bfc-4c06-a963-c62179f2f23a" name="Changes" comment="update profile pic and some ui changes">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/finallogo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/finalogo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/service/verifygmail.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config_subset" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config_subset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/pages/auth/login_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/auth/login_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/pages/auth/register_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/auth/register_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/pages/chat_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/chat_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/pages/group_info.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/group_info.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/pages/home_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/home_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/pages/profile_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/profile_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/service/auth_service.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/service/auth_service.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/shared/constants.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/shared/constants.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/widgets/message_tile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/widgets/message_tile.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +58,7 @@
     "com.android.tools.idea.devicemanager.tab": "Physical",
     "dart.analysis.tool.window.visible": "false",
     "io.flutter.reload.alreadyRun": "true",
-    "last_opened_file_path": "C:/Users/rahul/StudioProjects/group_chatapp_flutter_firebase/assets",
+    "last_opened_file_path": "C:/Users/rahul/StudioProjects/flutterfire-samples",
     "settings.editor.selected.configurable": "vcs.Git",
     "show.migrate.to.gradle.popup": "false"
   }
@@ -76,7 +94,21 @@
       <option name="project" value="LOCAL" />
       <updated>1704374522098</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="update profile pic and some ui changes">
+      <created>1704885782505</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1704885782505</updated>
+    </task>
+    <task id="LOCAL-00003" summary="update profile pic and some ui changes">
+      <created>1704885894080</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1704885894080</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
